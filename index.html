@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f3556">
+  <title>Nikoh To‘yi Taklifnomasi</title>
+  <meta name="description" content="Sizni nikoh to‘yimizga taklif qilamiz">
+  <link rel="icon" href="favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="orn" viewBox="0 0 120 20">
+      <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 10H42"/><path d="M78 10H118"/>
+        <path d="M60 2l8 8-8 8-8-8z"/>
+        <path d="M60 6.5l3.5 3.5-3.5 3.5-3.5-3.5z" fill="currentColor"/>
+        <circle cx="47" cy="10" r="1.4" fill="currentColor"/><circle cx="73" cy="10" r="1.4" fill="currentColor"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- MUQOVA: butun rasm ramka bo'ladi -->
+<div class="cover" id="cover">
+  <div class="particles" id="particles" aria-hidden="true"></div>
+  <div class="frame">
+    <div class="inside">
+      <p id="cvTitle" class="cv-t fi" style="--d:.9s"></p>
+      <div class="cv-names">
+        <span id="cvGroom" class="up shim" style="--d:1.3s"></span>
+        <svg class="orn fi" style="--d:1.8s" aria-hidden="true"><use href="#orn"/></svg>
+        <span id="cvBride" class="up shim" style="--d:2s"></span>
+      </div>
+      <button class="open" id="open" type="button"><span>Taklifnomani ochish</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="bloom" aria-hidden="true"></div>
+</div>
+
+<main class="page" id="page">
+  <div class="fx" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><canvas id="fx"></canvas></div>
+
+  <!-- Tepa qism: rasmdagi bismillah va oyat ostida -->
+  <header class="hero rv" id="hero">
+    <p id="guest" class="guest c" hidden></p>
+    <p id="tarjima" class="tr c" style="--i:1" hidden></p>
+    <p id="manba" class="src c" style="--i:2" hidden></p>
+  </header>
+
+  <div class="divider rv" aria-hidden="true"><svg class="orn c"><use href="#orn"/></svg></div>
+
+  <section class="sec names rv" aria-label="Kelin va kuyov">
+    <figure class="photo c" style="--i:0">
+      <div class="ph" role="img" aria-label="Nikoh uzuklari"></div>
+      <div class="nm">
+        <p class="eyebrow c">Nikoh to‘yi</p>
+        <h1>
+        <span id="kuyov" class="c shim" style="--i:0"></span>
+        <i class="c" style="--i:1"><svg class="orn"><use href="#orn"/></svg></i>
+        <span id="kelin" class="c shim" style="--i:2"></span>
+      </h1>
+      </div>
+    </figure>
+    <p id="sweet" class="sweet c" style="--i:3" hidden></p>
+  </section>
+
+  <section class="sec rv" aria-labelledby="heading">
+    <h2 id="heading" class="c"></h2>
+    <p id="invite" class="text c" style="--i:1"></p>
+  </section>
+
+  <section class="sec rv" aria-label="To‘y tafsilotlari">
+    <article class="card c">
+      <div class="seal" aria-hidden="true"><span id="mono"></span></div>
+      <p class="eyebrow">To‘y tafsilotlari</p>
+
+      <p class="tl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg><span>Sana</span></p>
+      <p id="dWeek" class="wk"></p>
+      <div class="dt">
+        <b id="dDay" class="day"></b>
+        <span class="ym"><span id="dMonth" class="mo"></span><span id="dYear" class="yr"></span></span>
+      </div>
+
+      <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+
+      <p class="tl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Boshlanish vaqti</span></p>
+      <p id="dTime" class="tv"></p>
+      <a id="calBtn" class="lnk" download="nikoh-toyi.ics" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18M12 14v4M10 16h4"/></svg><span>Taqvimga qo‘shish</span></a>
+
+      <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+
+      <p class="tl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Manzil</span></p>
+      <p id="vName" class="vn"></p>
+      <p id="vAddr" class="va"></p>
+      <a id="mapBtn" class="btn" target="_blank" rel="noopener noreferrer"><span>Xaritada ko‘rish</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    </article>
+  </section>
+
+  <section class="sec cd-sec rv" id="secCount" hidden>
+    <p class="eyebrow c">To‘ygacha qoldi</p>
+    <div class="count c" id="count" style="--i:1">
+      <div><b id="cd">0</b><small>kun</small></div>
+      <div><b id="ch">0</b><small>soat</small></div>
+      <div><b id="cm">0</b><small>daqiqa</small></div>
+      <div><b id="cs">0</b><small>soniya</small></div>
+    </div>
+    <p id="countMsg" class="note" hidden></p>
+  </section>
+
+  <section class="sec rv" aria-label="Ulashish">
+    <button id="shareBtn" class="btn ghost c" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span>Taklifnomani ulashish</span></button>
+  </section>
+
+  <!-- Pastki qism: juftlik rasmi shu yerda -->
+  <footer class="foot rv" id="foot">
+    <div class="seal" aria-hidden="true"><span id="mono2"></span></div>
+    <p id="dua" class="dua c"></p>
+    <p id="omin" class="omin c" style="--i:1"></p>
+    <svg class="orn c" style="--i:2" aria-hidden="true"><use href="#orn"/></svg>
+    <p id="wait" class="wait c" style="--i:3"></p>
+    <svg class="heart c" style="--i:3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+    <p id="sign" class="sign c" style="--i:4" hidden></p>
+  </footer>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
